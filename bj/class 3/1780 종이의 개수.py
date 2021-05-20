@@ -1,4 +1,4 @@
-# 메모리 초과... >> list 마
+
 import sys
 from math import log
 
