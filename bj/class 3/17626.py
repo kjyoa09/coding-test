@@ -1,3 +1,4 @@
+# DP활용 
 import sys
 from math import ceil, sqrt
 sys.stdin = open("C:\\Users\\LYJ_lab\\Desktop\\동현\\coding-test\\bj\\class 3\\in.txt","r")
