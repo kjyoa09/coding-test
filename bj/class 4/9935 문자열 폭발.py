@@ -1,7 +1,7 @@
 ## Index 로 풀었을 때에는 pypy로 통과... >> python 3으로는 안되네;;
 ## Slice 로는 시간초과..
 ## Del로 하면 더 빠르네;; 
-#https://stackoverflow.com/questions/29193127/is-it-faster-to-truncate-a-list-by-making-it-equal-to-a-slice-or-by-using-del
+## https://stackoverflow.com/questions/29193127/is-it-faster-to-truncate-a-list-by-making-it-equal-to-a-slice-or-by-using-del
 ## 일반적으로 Del로 지우는 것이 더 빠른듯...
 import sys
 sys.stdin = open("in.txt","r")
