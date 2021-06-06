@@ -1,3 +1,4 @@
+# 시간 초과
 import sys,heapq as hq
 sys.stdin = open("in.txt","r")
 N,K = map(int,sys.stdin.readline().rstrip().split())
