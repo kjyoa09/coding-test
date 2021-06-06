@@ -1,4 +1,6 @@
 # N이 1일 때 생각
+# 1 찾으면 Flag 로 탈출
+# dfs 로 ans 만들기.
 import sys
 from collections import deque
 sys.stdin = open("in.txt","r")
