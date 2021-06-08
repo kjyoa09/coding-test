@@ -1,3 +1,4 @@
+# 실패
 import sys
 sys.stdin = open("in.txt","r")
 N,M = map(int,sys.stdin.readline().rstrip().split())
