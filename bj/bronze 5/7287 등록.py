@@ -1,0 +1,1 @@
+print(131,"kjyoa0009",sep = "\n")
