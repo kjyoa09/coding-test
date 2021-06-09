@@ -1,3 +1,4 @@
+#크루스칼 알고리즘
 from sys import stdin
 import heapq as hq
 stdin = open("in.txt","r")
