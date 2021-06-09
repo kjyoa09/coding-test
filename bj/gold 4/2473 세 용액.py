@@ -1,3 +1,5 @@
+# 2467 용액과 비슷한 문제
+# 하나 잡고 이분탐색 수행.
 from sys import stdin
 stdin = open("in.txt")
 n = int(stdin.readline())
