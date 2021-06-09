@@ -1,3 +1,4 @@
+# Flag를 통해서 찾으면 전부 Break
 import sys
 sys.setrecursionlimit(10**8)
 sys.stdin = open("in.txt","r")
