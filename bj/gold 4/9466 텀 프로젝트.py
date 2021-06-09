@@ -1,3 +1,5 @@
+# 뿌듯
+# 한 번이라도 들른 곳 체크 >> 효율성
 from sys import stdin
 import sys
 sys.setrecursionlimit(10**6)
@@ -14,7 +16,6 @@ def find(visit,idx,maps):
         state = False
         visit[idx] = 1
     else:
-         
         if visit[next_idx] == -1 :
             visit[next_idx] = 0
             find(visit,next_idx,maps)
@@ -45,4 +46,3 @@ for _ in range(T):
             find(arr,i,maps)
             maps[i] = -1
     print(sum(arr)+1)
-    # print(maps)
