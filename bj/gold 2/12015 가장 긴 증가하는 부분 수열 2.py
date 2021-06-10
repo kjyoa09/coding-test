@@ -1,3 +1,6 @@
+# 10 20 999 15
+# 이런 수열이 주어지면 10 15 999 가 Return 되는데 
+# 길이여서 통과됨...
 import bisect,sys
 sys.stdin = open("in.txt","r")
 N = int(sys.stdin.readline())
