@@ -1,3 +1,6 @@
+# 크루스칼 알고리즘.
+# find한 값이 같으면 사이클 생성 >> break
+
 from sys import stdin
 stdin = open("in.txt")
 N,M = map(int,stdin.readline().rstrip().split())
