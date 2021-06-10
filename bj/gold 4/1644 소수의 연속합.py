@@ -1,3 +1,6 @@
+# 에라토스테네스의 체 활용해서 N 이하 소수 찾기
+# two pointers 사용해서 구간 합 구하기
+# 소수 문제 풀때 N=1일 때 예외처리 잘하기
 from sys import stdin
 stdin = open("in.txt","r")
 N = int(stdin.readline())
