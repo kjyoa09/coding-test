@@ -1,3 +1,5 @@
+# 이분탐색.
+# Counter 활용
 from collections import Counter 
 from sys import stdin
 stdin = open("in.txt","r")
