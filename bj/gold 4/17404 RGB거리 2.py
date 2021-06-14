@@ -1,3 +1,6 @@
+# 1149 RGB와 다른점 : 1번 집과 N번 집 고려해야함
+# 1번집 색 고정 후 마지막 N 번집 색 고를 때 1번집과 다른 색 고르도록 유도 
+# ex : 1번 Red N 번 value : [inf,num,num]
 from sys import stdin
 stdin = open("in.txt","r")
 N = int(stdin.readline())
