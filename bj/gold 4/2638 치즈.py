@@ -1,3 +1,6 @@
+# 1 : 치즈 0 :공기 -1 : 치즈 속 공기
+# 공기에서 BFS : 끝에 닿으면 0 아니면 -1
+# 치즈가 없을 때 까지 BFS
 from collections import deque
 from sys import stdin
 stdin = open("in.txt","r")
