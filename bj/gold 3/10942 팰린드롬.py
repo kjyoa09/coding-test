@@ -1,3 +1,6 @@
+# DP : maps[start+1][end-1] : 중간 구간이 팰린드롬이고 arr[start] == arr[end]면 start부터 end까지도 팰린드롬 
+# INDEX 번호 잘 생각하기 : 길이가 N 까지 가능한데 range(3,N)으로 둬서 틀림
+
 from sys import stdin
 stdin = open("in.txt","r")
 N = int(stdin.readline())
@@ -22,6 +25,10 @@ for _ in range(M):
         print(0)
 
 '''
+# 문자열을 넣는것 자체로도 일단 메모리 초과
+# 분할 정복 생각하고 작성 : 팰린드롬이라고 중심으로 나눈 두 부분이 팰린드롬이라는 생각 >> 틀린 이유
+
+
 from sys import stdin
 N = int(stdin.readline())
 arr = list(map(int,stdin.readline().rstrip().split()))
