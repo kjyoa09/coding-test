@@ -1,3 +1,4 @@
+# 0~M 까지 배열 만들어서 메모리 초과 방지
 from sys import stdin
 stdin = open("in.txt","r")
 N,S,M = map(int,stdin.readline().rstrip().split())
