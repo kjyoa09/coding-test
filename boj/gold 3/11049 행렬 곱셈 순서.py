@@ -1,4 +1,4 @@
-# 모든 경우의 수를 고려해야함...
+# 모든 경우의 수를 고려
 # ABCD > A BCD, AB CD, ABC D
 from sys import stdin
 stdin = open("in.txt","r")
