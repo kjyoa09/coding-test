@@ -1,3 +1,5 @@
+# 조건문 사용시 OR 이랑 AND 조건 한 줄에 같이 쓸 때 조심
+# 이왕이면 따로 쓰는 것이 확실한듯
 from sys import stdin
 stdin = open("in.txt","r")
 N,K = map(int,stdin.readline().rstrip().split())
