@@ -1,3 +1,5 @@
+# 예외처리
+# 특이한 CASE : ex) N == 1 >> 0 N<=3 : 매우 큰 점프 할 수 없음 
 
 from sys import stdin
 stdin = open("in.txt","r")
