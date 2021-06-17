@@ -6,3 +6,4 @@ while 1:
         print(dp[int(input())])
     except:
         break
+print(dp)
