@@ -1,3 +1,4 @@
+# 수정
 from sys import stdin
 import heapq as hq
 stdin = open("in.txt","r")
