@@ -1,3 +1,5 @@
+# 냅색 알고리즘 사용
+# Python3 시간 초과..
 from sys import stdin
 stdin = open("in.txt","r")
 D,P = map(int,stdin.readline().rstrip().split())
