@@ -1,3 +1,7 @@
+# dp
+# 거리에 따라 최소 시간을 저장[최대 정비를 받지 않고 갈 수 있는 최대 거리]
+# >> 리스트를 활용해서 저장할 경우 메모리 초과 
+# >> dict 활용
 from sys import stdin
 stdin = open("in.txt","r")
 input = stdin.readline
