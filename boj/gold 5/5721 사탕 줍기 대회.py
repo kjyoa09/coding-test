@@ -1,3 +1,5 @@
+# 줄 마다 최대값 구하기 >> list
+# 구한 list 바탕으로 최대값 구하기
 from sys import stdin
 stdin = open("in.txt","r")
 input = stdin.readline
