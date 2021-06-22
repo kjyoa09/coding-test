@@ -1,3 +1,4 @@
+# DFS
 from sys import stdin
 stdin = open("in.txt","r")
 input = stdin.readline
@@ -8,7 +9,6 @@ mo = [False] * 26
 for ch in ["a","e","i","o","u"]:
     mo[ord(ch)-97] = True
 ja = [True if mo[i] == False else False for i in range(26)]
-
 def dfs(idx,poss):
     if len(poss) == L:
         if sum([mo[ord(x)-97] for x in poss]) >= 1 and sum([ja[ord(x)-97] for x in poss]) >=2:
