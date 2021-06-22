@@ -1,3 +1,4 @@
+# index 조건 확인
 from sys import stdin
 stdin = open("in.txt","r")
 input = stdin.readline
