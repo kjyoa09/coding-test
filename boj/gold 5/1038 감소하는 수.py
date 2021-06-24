@@ -1,3 +1,4 @@
+# 전에 추가한 배열 기억해서 맨 앞자리에 1-9들어갈 수 있으면 추가
 from sys import stdin
 stdin = open("in.txt","r")
 input = stdin.readline
