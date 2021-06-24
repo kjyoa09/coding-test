@@ -1,3 +1,7 @@
+# 1 : row 마다 확인
+# 2 : row의 0의 짝 홀 여부와 K의 짝 홀 여부가 같지 않으면 그 행은 전부 켤 수 없음 
+#     and 0의 개수가 K 보다 작아야함
+# 3 : 2번 조건이 만족하면 행마다 같은 패턴인 행 개수 파악 >> ans
 from sys import stdin
 stdin = open("in.txt")
 input = stdin.readline
