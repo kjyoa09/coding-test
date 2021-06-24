@@ -1,3 +1,5 @@
+# 아무것도 못 옮기는 크래인 제거 >> 안 하면 시간 초과
+# 아무것도 못 옮기는 크래인 발생 >> 뒤에 크래인 확인 안함 >> 시간 조금 더 줄어듬
 from sys import stdin
 from collections import deque
 stdin = open("in.txt")
@@ -25,7 +27,11 @@ else:
                     break
                 else:
                     remain.append(tmp)
-            maps = remain + maps
+            if len(maps) == 0:
+                maps = remain
+                break
+            else:
+                maps = remain + maps
         ans +=1
         arr = save_arr
     print(ans)
