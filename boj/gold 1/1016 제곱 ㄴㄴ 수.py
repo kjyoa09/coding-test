@@ -1,3 +1,5 @@
+# 에라토스테네스의 체 응용
+# 2 ~ max**(1/2)까지 진행
 from sys import stdin
 stdin = open("in.txt","r")
 input = stdin.readline
