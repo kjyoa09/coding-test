@@ -1,3 +1,6 @@
+# 위상정렬
+# https://terms.naver.com/entry.naver?docId=3579618&cid=59086&categoryId=59093
+# 진입차수 
 from collections import deque
 from sys import stdin
 stdin = open("in.txt","r")
