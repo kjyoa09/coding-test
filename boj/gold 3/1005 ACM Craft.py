@@ -1,3 +1,6 @@
+# 위상정렬
+# iv 에 앞에 건물 지어야 하는 번호 저장
+# ans 에 각 건물 건설 완료 시간 저장 
 from sys import stdin
 from collections import deque
 stdin = open("in.txt")
