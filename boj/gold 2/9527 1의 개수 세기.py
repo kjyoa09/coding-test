@@ -1,3 +1,5 @@
+# dp 로 fac 계산
+# 자리 수 C 1 개수 * 앞 자리 1 개수
 from sys import stdin
 stdin = open("in.txt")
 input = stdin.readline
