@@ -1,3 +1,5 @@
+# 위상 정렬 + heap
+# list에 추가할 때 append 사용 += 별로인 듯
 from sys import stdin
 import heapq as hq
 stdin = open("in.txt")
@@ -17,7 +19,7 @@ for idx,va in enumerate(dg):
 ans = []
 while que:
     tmp = hq.heappop(que)
-    ans += str(tmp)
+    ans.append(str(tmp))
     for i in v[tmp]:
         dg[i] -= 1
         if dg[i] == 0:
