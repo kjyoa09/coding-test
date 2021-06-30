@@ -1,3 +1,6 @@
+# Union Find
+# 처음에는 조합 (nC2) 로 풀려고함 >> 메모리 초과
+# x,y,z 로 Sort 후 앞 뒤로 비교 >> 시간 초과 나올줄 알았는데 통과됨..
 from sys import stdin
 import heapq as hq
 stdin = open("in.txt")
