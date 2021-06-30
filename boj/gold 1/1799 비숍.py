@@ -1,3 +1,7 @@
+# 백트레킹
+# 검은색 흰색 안나누면 시간 초과
+# N-Queens 풀 때랑 비슷하게 대각선 확인(row+col and row-col)
+
 from sys import stdin
 stdin = open("in.txt")
 input = stdin.readline
