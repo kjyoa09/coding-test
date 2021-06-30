@@ -15,4 +15,5 @@ for r in range(1,100):
         else:
             maps[r+1][c-1] += maps[r][c]
             maps[r+1][c+1] += maps[r][c]
+print(maps[10])
 print(sum(maps[N])%1_000_000_000)
