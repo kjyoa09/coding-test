@@ -1,9 +1,10 @@
-# 1208 부분수열의 합 2 풀기 전 풀어봄
+# 1182 부분 수열의 합 그대로 풀면 시간초과
+# 앞부분 뒷부분 나눠서 풀면 시간초과 X
+# O(2**N) >> O(2**(N//2))+O(2**(N//2))
 from sys import stdin
 from collections import defaultdict
 stdin = open("in.txt")
 input = stdin.readline
-
 N,S = map(int,input().rstrip().split())
 arr = list(map(int,input().rstrip().split()))
 ldic = defaultdict(int)
