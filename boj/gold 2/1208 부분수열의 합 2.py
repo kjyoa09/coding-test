@@ -1,20 +1,30 @@
+# 1208 부분수열의 합 2 풀기 전 풀어봄
 from sys import stdin
-from collections import deque
+from collections import defaultdict
 stdin = open("in.txt")
 input = stdin.readline
 
 N,S = map(int,input().rstrip().split())
 arr = list(map(int,input().rstrip().split()))
-maps = [[0 for _ in range(2000001)] for _ in range(N+1)]
-maps[0][1000000] = 1
-que = deque([1000000])
-for i in range(1,N+1):
-    tmp_que = deque([])
-    while que:
-        tmp = que.pop()
-        tmp_que.append(tmp)
-        tmp_que.append(tmp+arr[i-1])
-        maps[i][tmp] += maps[i-1][tmp]
-        maps[i][tmp] += maps[i-1][tmp+arr[i-1]]
-    que = tmp_que
-print(maps[N][S+1000000])
+ldic = defaultdict(int)
+tmp = []
+for a in arr[:N//2]:
+    ldic[a] += 1
+    if len(tmp):
+        for i in range(len(tmp)):
+            ldic[tmp[i]+a] += 1
+            tmp.append(tmp[i]+a)
+    tmp.append(a)
+rdic = defaultdict(int)
+tmp = []
+for a in arr[N//2:]:
+    rdic[a] += 1
+    if len(tmp):
+        for i in range(len(tmp)):
+            rdic[tmp[i]+a] += 1
+            tmp.append(tmp[i]+a)
+    tmp.append(a)
+ans = ldic[S] + rdic[S]
+for lk in ldic.keys():
+    ans += ldic[lk] * rdic[S-lk]   
+print(ans)
