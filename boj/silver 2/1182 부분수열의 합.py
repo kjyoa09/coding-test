@@ -1,3 +1,4 @@
+# 1208 부분수열의 합 2 풀기 전 풀어봄
 from sys import stdin
 from collections import defaultdict
 stdin = open("in.txt")
