@@ -1,3 +1,6 @@
+# DP
+# 비트마킹 0-9 까지 2진수로 표시하고 각 값을 사용하면 표시
+# 3차원 list 만들 때 [0]*10 for _ in range >> 이런 식으로 만들면 값이 같이 변함
 from sys import stdin
 stdin = open("in.txt")
 input = stdin.readline
