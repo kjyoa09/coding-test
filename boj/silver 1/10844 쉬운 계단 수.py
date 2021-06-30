@@ -1,3 +1,5 @@
+# dp
+# 1562 계단 수 전 풀어봄
 from sys import stdin
 stdin = open("in.txt")
 input = stdin.readline
