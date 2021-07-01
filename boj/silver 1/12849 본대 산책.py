@@ -1,7 +1,10 @@
+# DP
+# 12850 본대 산책 2 전 풀어봄
+# 피보나치 수열 느낌
 from sys import stdin
 stdin = open("in.txt")
 input = stdin.readline
-N = 10
+N = int(input())
 #0 : 정보 과학관
 #1 : 전산관
 #2 : 미래관
