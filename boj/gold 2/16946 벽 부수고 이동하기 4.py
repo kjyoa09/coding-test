@@ -1,9 +1,12 @@
+# 1 인 지점마다 BFS >> 시간 초과
+# 연결된 0끼리 그룹으로 묶고 arr 에 개수 메모
+# 1 인 지점마다 그룹 중복되지 않게 더하기
+# 10으로 나눈 나머지(문제 잘읽기)
 from sys import stdin
 from collections import deque
 from types import coroutine
 stdin = open("in.txt")
 input = stdin.readline
-
 N,M = map(int,input().rstrip().split())
 maps = [list(input().rstrip()) for _ in range(N)]
 check = [[-1 for _ in range(M)] for __ in range(N)]
