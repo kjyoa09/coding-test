@@ -1,3 +1,9 @@
+# 10942 팰린드롬? 과 연관 문제
+# 0~L 까지 확인하면서 팰린드롬 개수 세기
+# 0~l >> 팰린드롬 o >> dp[l] = 1
+#                 x >> dp[l-1] + 1 >> 최대값
+#                      i~l 까지 팰린드롬 >> dp[i-1] + 1 vs dp[l]  1<i<l
+
 from sys import stdin
 stdin = open("in.txt")
 st = list(stdin.readline().rstrip())
