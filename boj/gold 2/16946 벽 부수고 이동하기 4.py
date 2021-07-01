@@ -4,7 +4,6 @@
 # 10으로 나눈 나머지(문제 잘읽기)
 from sys import stdin
 from collections import deque
-from types import coroutine
 stdin = open("in.txt")
 input = stdin.readline
 N,M = map(int,input().rstrip().split())
