@@ -1,18 +1,32 @@
-# 수정
+# Bag에 담을 수 있는 무게의 보석 전부 POP 
+# 그 중 가장 가치 높은 보석 선택
+
 from sys import stdin
 import heapq as hq
+
 stdin = open("in.txt","r")
 N,K = map(int,stdin.readline().rstrip().split())
-M = []
-B = []
+M,B,que = [],[],[]
+
 for _ in range(N):
     m,v = map(int,stdin.readline().rstrip().split())
     hq.heappush(M,(m,v))
 for _ in range(K):
     hq.heappush(B,int(stdin.readline()))
+
 ans = 0
+while B:
+    tmp_B = hq.heappop(B)
+    while len(M) and M[0][0] <= tmp_B:
+        m,v = hq.heappop(M)
+        hq.heappush(que,(-v,m))
+
+    if len(que):
+        ans -= hq.heappop(que)[0]
 print(ans)
-print(M,B)
+
+
+
 
 
 '''
