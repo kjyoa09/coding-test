@@ -8,4 +8,4 @@ class ftn:
         tmp = [maps[0]] + [[0] * self.N for _ in range(self.N - 1)]
         TF = [True] * self.N
         for r in range(self.N - 1):
-            
+            DeprecationWarning
