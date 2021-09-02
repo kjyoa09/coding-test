@@ -1,6 +1,10 @@
 # ccw...
 # 기하 어렵다..
 
+from sys import stdin
+stdin = open("in.txt")
+x1,y1,x2,y2 = map(int,stdin.readline().strip().split(' '))
+x3,y3,x4,y4 = map(int,stdin.readline().strip().split(' '))
 answer=0
 didanswer=False
 def ccw(x1,y1,x2,y2,x3,y3):
