@@ -1,27 +1,33 @@
-import sys
+from sys import stdin
 import heapq as hq
-sys.stdin = open("in.txt","r")
-n = int(sys.stdin.readline())
-m = int(sys.stdin.readline())
-dic = {i:[] for i in range(1,n+1)}
+
+stdin = open("in.txt","r")
+input = stdin.readline
+
+n = int(input())
+m = int(input())
+
+maps = [[] for _ in range(n+1)]
+
 for _ in range(m):
-    s,e,v = map(int,sys.stdin.readline().rstrip().split())
-    dic[s].append((v,e))
-s,e = map(int,sys.stdin.readline().rstrip().split())
-inf = float("INF")
-que = [(0,s,[s])]
-visit = [inf] * (n+1)
-visit[s] = 0 
-path = []
+    s,e,v = map(int,input().strip().split(' '))
+    maps[s].append((v,e))
+start,end = map(int,input().strip().split(' '))
+
+cost = [float('inf')] * (n+1)
+que = [(0,start,[start])]
+
+ans = {}
 
 while que:
-    v,s,r = hq.heappop(que)    
-    for cost,end in dic[s]:
-        if visit[end] > cost + v:
-            visit[end] = cost + v
-            hq.heappush(que,(cost + v,end,r + [end]))
-            if end == e:
-                path = r + [end] 
-print(visit[e])
-print(len(path))
-print(" ".join(map(str,path))) 
+    cnt,st,path = hq.heappop(que)    
+    if cost[st] > cnt:
+        cost[st] = cnt
+        for co,en in maps[st]:
+            if cost[en] > co + cnt:
+                if en == end:
+                    ans[cnt + co] = path + [en]
+                hq.heappush(que,(co + cnt,en,path + [en]))
+print(cost[end])
+print(len(ans[cost[end]]))
+print(' '.join(map(str,ans[cost[end]])))
