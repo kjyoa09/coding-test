@@ -1,3 +1,13 @@
+# BFS + 구현
+
+# 대문자 >> key 있음 >> pass
+# 대문자 >> key 없음 >> nextque
+
+# 소문자(key) 찾음 >> nextque 계산
+# 소문자(key) 못찾음 >> break
+
+# $ or . >> checkmaps > False
+
 from collections import deque
 
 class ftn:
