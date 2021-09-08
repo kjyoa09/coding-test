@@ -1,5 +1,6 @@
+# 비트마스킹 + dp
+# 비트 연산자...는 나쁘지 않은데 오히려 dp가 더 어렵네;;
 from sys import stdin
-
 # stdin = open("in.txt")
 # input = stdin.readline
 
