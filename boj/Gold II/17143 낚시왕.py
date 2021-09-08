@@ -1,3 +1,6 @@
+# 구현
+# 재귀함수를 통해 move 계산
+
 from sys import stdin
 stdin = open('in.txt','r')
 input = stdin.readline
