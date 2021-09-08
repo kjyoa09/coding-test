@@ -1,3 +1,13 @@
+# 출처 : http://melonicedlatte.com/algorithm/2018/07/16/074622.html
+# 최장 수열에서는 행렬이 정답 행렬이라는 것을 보장하지는 않지만 
+# '마지막 값'이 정답 행렬의 '마지막 값'이라는 것은 보장되어 있습니다.
+
+# 마지막 값 index >> la
+# 해당 index 전 값 arr >> bf
+# bisect안쓰고 binary 써도 통과됨
+# 마지막에 답 만들 때 str + 로 만들면 시간 초과
+
+
 from sys import stdin
 input = stdin.readline
 
