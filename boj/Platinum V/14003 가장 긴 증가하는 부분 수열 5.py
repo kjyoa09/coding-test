@@ -1,5 +1,4 @@
 from sys import stdin
-stdin = open('in.txt')
 input = stdin.readline
 
 N = int(input().strip())
@@ -38,10 +37,45 @@ for idx,num in enumerate(arr):
                 bf.append(val[tg-1])
 
 print(len(ans))    
+re = []
 for i in range(len(ans)):
-    if i == 0:
-        re = str(arr[la])
-    else:
-        re = str(arr[la]) + ' ' + re
+    re.append(arr[la])
     la = bf[la]
-print(re)
+re.reverse()
+print(*re)
+
+
+import bisect
+from sys import stdin
+stdin = open('in.txt')
+input = stdin.readline
+
+N = int(input().strip())
+arr = list(map(int,input().strip().split(' ')))
+ans,val,bf,la = [arr[0]],[0],[-1],-1
+
+for i in range(1,N):
+    idx = bisect.bisect_left(ans,arr[i])
+    if len(ans) == idx:
+        ans.append(arr[i])
+        bf.append(val[-1])
+        val.append(i)
+        if la < i:
+            la = i
+    else:
+        ans[idx] = arr[i]
+        val[idx] = i
+        if idx == 0:
+            bf.append(-1)
+        else:
+            bf.append(val[idx-1])
+
+print(len(ans))
+re = []
+for i in range(len(ans)):
+    re.append(arr[la])
+    la = bf[la]
+re.reverse()
+print(*re)
+
+
