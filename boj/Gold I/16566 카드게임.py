@@ -1,3 +1,6 @@
+# bisect + union find
+# 단, 민수가 카드를 내지 못하는 경우는 없다고 가정한다. >> ll = list(range(M+1)) >> 다른 조건 추가 안함
+
 from sys import stdin
 from bisect import bisect_right
 stdin = open('in.txt')
