@@ -1,27 +1,23 @@
 from sys import stdin
+from bisect import bisect_right
 stdin = open('in.txt')
 input = stdin.readline
 N,M,K = map(int,input().strip().split(' '))
-card = {idx:k for idx,k in enumerate(sorted(map(int,input().strip().split(' '))))}
-arr  = list(map(int,input().strip().split(' ')))
 
+arr = list(map(int,input().strip().split(' ')))
+arr.sort()
 
-def find(lt,rt,num,card):
-    ans = 4_000_001
-    
-    while lt<=rt:
-        mid = (lt+rt)//2
-        if card[mid] <= num:
-            lt = mid + 1
-        else:
-            if ans > card[mid]:
-                ans = card[mid]
-                idx = mid
-            rt = mid - 1
-    return idx
+ll = list(range(M+1))
+def find(idx):
+    if ll[idx] != idx:
+        ll[idx] = find(ll[idx])
+    return ll[idx]
 
-for num in arr:
-    idx = find(0,M-1,num,card)
-    print(card[idx])
-    del card[idx]
-    M -=1 
+def union(idx1,idx2):
+    idx2 = find(idx2)
+    ll[idx1] = idx2
+
+for num in map(int,input().strip().split(' ')):
+    idx = find(bisect_right(arr,num))
+    print(arr[idx])
+    union(idx,idx+1)
