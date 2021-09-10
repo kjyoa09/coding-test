@@ -9,7 +9,6 @@ class ftn:
     def __init__(self,maps):
         self.maps = maps
         self.ans = -1
-        self.cnt = {}
   
     def fun(self,TF):
         arrs = [x[:] for x in maps]
