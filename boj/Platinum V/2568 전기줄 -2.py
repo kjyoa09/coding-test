@@ -1,3 +1,5 @@
+# LIS(bisect)
+# 이어진 값이 주어져서 확인해야함
 from sys import stdin
 from bisect import bisect_left
 stdin = open('in.txt','r')
