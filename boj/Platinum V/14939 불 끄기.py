@@ -1,4 +1,8 @@
-from os import rename
+'''
+비트마스크 연산자 : https://studyandwrite.tistory.com/325
+>> 활용법을 잘 모르겠네;.;
+
+'''
 from sys import stdin
 stdin = open('in.txt','r')
 input = stdin.readline
