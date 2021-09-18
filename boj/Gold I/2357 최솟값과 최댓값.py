@@ -1,3 +1,4 @@
+# 세그먼트 트리
 class ftn:
     def __init__(self,arr):
         self.arr = arr
