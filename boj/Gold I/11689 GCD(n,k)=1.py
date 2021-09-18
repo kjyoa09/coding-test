@@ -1,3 +1,5 @@
+# 오일러 토션트 함수 : 1부터 n까지의 양의 정수 중에 n과 서로소인 수의 개수를 나타내는 함수
+# dfs : 소인수 분해 함수
 from sys import stdin
 from math import sqrt
 
