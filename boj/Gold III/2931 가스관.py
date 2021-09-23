@@ -1,3 +1,5 @@
+# 진짜 하나하나 구현함..
+# 숏코딩은 어디까지 줄이려나;
 from sys import stdin
 from collections import deque
 stdin = open('in.txt','r')
@@ -75,7 +77,6 @@ else:
     ans = []
     for idx in range(4):
         px,py = coord[0]+dx[idx],coord[1]+dy[idx]
-        
         if 0<=px<R and 0<=py<C :
             if idx==0 and dic[(px,py)] in ['-','3','4','+']:
                 ans.append(0)
