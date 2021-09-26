@@ -1,4 +1,6 @@
-
+# Union Find
+# M에서 불필요한 간선이 있을 경우 조심
+# 그런데 왜 틀렸습니다. 가 아니라 Index에러지;;
 from sys import stdin
 import heapq as hq
 from math import sqrt
