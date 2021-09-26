@@ -1,6 +1,7 @@
 # Union Find
 # M에서 불필요한 간선이 있을 경우 조심
-# 그런데 왜 틀렸습니다. 가 아니라 Index에러지;;
+# 그런데 왜 틀렸습니다. 가 아니라 Index에러지;; >> hq.heappop([]) 이것도 Index 에러였네;;
+
 from sys import stdin
 import heapq as hq
 from math import sqrt
@@ -42,6 +43,7 @@ for _ in range(M):
 
 N-=1
 ans = 0
+
 while N:
     tmp,idx1,idx2 = hq.heappop(que)
     if find(idx1) != find(idx2):
