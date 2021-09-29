@@ -1,6 +1,5 @@
 from sys import stdin
 import heapq as hq
-from collections import deque
 stdin = open("in.txt","r")
 input = stdin.readline
 N = int(input())
