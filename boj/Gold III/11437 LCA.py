@@ -1,4 +1,4 @@
-from sys import stdin,setrecursionlimit
+from sys import stdin,setrecursionlimit,stdout
 setrecursionlimit(10**5)
 stdin = open('in.txt','r')
 input = stdin.readline
@@ -19,8 +19,8 @@ def mk(pre,now,cnt):
             pr[c] = now
             mk(now,c,cnt+1)
 mk(0,1,0)
-for _ in range(int(input())):
-    a,b = map(int,input().split(' '))
+dic = {}
+def ftn(a,b):
     while dg[a] != dg[b]:
         if dg[a] > dg[b] : 
             a = pr[a]
@@ -29,4 +29,14 @@ for _ in range(int(input())):
     while a != b:
         a = pr[a]
         b = pr[b]
-    print(a)
+    return str(a)
+
+for _ in range(int(input())):
+    a,b = map(int,input().split(' '))
+    if (a,b) in dic:
+        stdout.write(dic[(a,b)] + '\n')
+    else:
+        tmp = ftn(a,b)
+        stdout.write(tmp + '\n')
+        dic[(a,b)] = tmp
+        dic[(b,a)] = tmp
