@@ -1,32 +1,36 @@
-# Dp로 안되네;;
-import sys
-sys.stdin = open("in.txt","r")
+from sys import stdin
+import heapq as hq
+
+stdin = open("in.txt","r")
+input = stdin.readline
+
 maps = [[0] * 501 for _ in range(501)]
-N = int(sys.stdin.readline())
-for _ in  range(N):
-    x1,y1,x2,y2 = map(int,sys.stdin.readline().rstrip().split())
+ch = [[True] * 501 for _ in range(501)]
+for _ in  range(int(input())):
+    x1,y1,x2,y2 = map(int,input().strip().split(' '))
     for r in range(min(x1,x2),max(x1,x2)+1):
         for c in range(min(y1,y2),max(y1,y2)+1):
             maps[r][c] = 1
-N = int(sys.stdin.readline())
-for _ in  range(N):
-    x1,y1,x2,y2 = map(int,sys.stdin.readline().rstrip().split())
+
+for _ in  range(int(input())):
+    x1,y1,x2,y2 = map(int,input().strip().split(' '))
     for r in range(min(x1,x2),max(x1,x2)+1):
         for c in range(min(y1,y2),max(y1,y2)+1):
-            maps[r][c] = float("INF")
-maps[0][0] = 0
-ans = [[0] * 501 for _ in range(501)]
-for r in range(500,):
-    for c in range(501):
-        if r == 0 and c == 0:
-            ans[r][c] = 0
-        elif r == 0:
-            ans[r][c] = ans[r][c-1] + maps[r][c]
-        elif c == 0:
-            ans[r][c] = ans[r-1][c] + maps[r][c]
-        else:
-            ans[r][c] = min(ans[r-1][c],ans[r][c-1]) + maps[r][c]
-if ans[500][500] == float("INF"):
-    print(-1)
+            maps[r][c] = -1
+
+que = [(0,0,0)]
+D = [(0,1),(1,0),(0,-1),(-1,0)]
+ch[0][0] = False
+while que:
+    cnt,nx,ny = hq.heappop(que)
+    if nx==ny==500:
+        print(cnt)
+        break
+    
+    for dx,dy in D:
+        px,py = nx + dx,ny + dy
+        if 0<=px<501 and 0<=py<501 and maps[px][py] != -1 and ch[px][py]:
+            ch[px][py] = False
+            hq.heappush(que,(cnt+maps[px][py],px,py))
 else:
-    print(ans[500][500])
+    print(-1)
