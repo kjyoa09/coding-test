@@ -1,22 +1,18 @@
 from sys import stdin
 stdin = open('in.txt')
 input = stdin.readline
-N,arr = int(input()),[]
 
-for n in range(N):
-    t,p = map(int,input().strip().split(' '))
-    arr.append((t+n,n+1,p))
-arr.sort(key = lambda x:(x[0],-x[-1],x[1]))
-
-ans = 0
-li = [0] * (N+1)
-for a in arr:
-    e,s,p = a
-    if e > N:
-        continue
-    else:
-        if li[s-1] == 0:
-            li[e] = max(max(li[:s])+p,li[e])
-        else:
-            li[e] = max(li[s-1]+p,li[e])
-print(max(li))
+n = int(input())
+t,p = [],[]
+dp = [0] * (n+1)
+for i in range(n):
+    x,y = map(int,input().split())
+    t.append(x)
+    p.append(y)
+M = 0 
+for i in range(n):
+    M = max(M,dp[i])  
+    if i+t[i] > n :  
+        continue 
+    dp[i+t[i]] = max(M+p[i],dp[i+t[i]])
+print(max(dp))
