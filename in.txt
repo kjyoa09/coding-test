@@ -1,5 +1,14 @@
-1
-3
-91125426
-911
-97625999
+4 3
+red
+blue
+purple
+orange
+shift
+joker
+noon
+5
+redshift
+bluejoker
+purplenoon
+orangeshift
+whiteblue
