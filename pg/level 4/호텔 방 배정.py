@@ -20,12 +20,9 @@ def solution(k, room_number):
     sol = ftn()
     ans = []
     for num in room_number:
-        if sol.dic.get(num,0) == 0:
-            ans.append(num)
-            sol.dic[num] = num + 1
-        else:
-            sol.find(num)
-            tmp = sol.dic[num]
-            ans.append(tmp)
-            sol.dic[tmp] = tmp + 1
+        if sol.dic.get(num,0) != 0:
+            num = sol.find(num)
+        ans.append(num)
+        sol.dic[num] = num +1
+    #print(sol.dic)
     return ans
