@@ -1,3 +1,6 @@
+# Np,Pp,Qp : 현재,늘릴 구간, 줄일 구간
+# 
+
 from collections import Counter
 def solution(land, P, Q):
     dic = Counter([y for x in land for y in x])
