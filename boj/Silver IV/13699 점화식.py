@@ -14,5 +14,3 @@ for tt in range(1,36):
         t[tt] += t[i] * t[tt-1-i]
 
 print(t[n])
-
-
