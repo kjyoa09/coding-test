@@ -22,18 +22,16 @@ def ftn(arr):
 
     while arr:
         c,v = heappop(arr)
+        heappush(res,(v,c))
         ans += v
         
-        if ans >= m:
+        if ans >= m and len(res) == n:
             return c
-        
-        else :
-            heappush(res,(v,c)) # 만족도 오름차순으로 heappush
+            
         if len(res) == n:
             v,c = heappop(res)
             ans -= v 
 
-    if len(arr) == 0 :
-        return -1
+    return -1
     
 print(ftn(arr))
